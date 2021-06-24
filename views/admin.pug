@@ -1,0 +1,102 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='assets/bootstrap.min.css')
+  link(rel='stylesheet' href='assets/main.css')
+  title CryptoCAD Admin
+nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+  button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarTogglerDemo03' aria-controls='navbarTogglerDemo03' aria-expanded='false' aria-label='Toggle navigation')
+    span.navbar-toggler-icon
+  #navbarTogglerDemo03.collapse.navbar-collapse
+    ul.navbar-nav.mr-auto.mt-2.mt-lg-0
+      a.navbar-brand(href='/' target='_blank')
+        img(src='assets/img/cryptocad-logo-bg-70.png' height='32')
+      li.nav-item.active
+        a.nav-link(href='admin')
+          | Admin page
+          span.sr-only (current)
+      li.nav-item
+        a.nav-link(href='emaillist')
+          | Email list
+          span.sr-only
+      li.nav-item
+        a.nav-link(href='logout') Logout
+form
+.container
+  .row
+    .col-md.mainbanner
+      h1 Welcome
+  .row
+    .col-md.mainbanner
+      h2#date1 
+  .row
+    .col-md.mainbanner
+      h3 Edit the list of Cryptocurrency
+  .row
+    .table
+      #pricetable.container
+        .row.tableheader1.h3
+          .col-sm-3
+            h3 Logo
+          .col-sm-3
+            h3 Symbol
+          .col-sm-3 
+            h3 Name
+          .col-sm-3
+            h3 Display
+        each val,index in clist
+            .row
+                .col-sm-3.table-cell
+                    .crypto-logo
+                        img(src=val.logo)
+                .col-sm-3.table-cell=val.symbol
+                .col-sm-3.table-cell=val.name
+                .col-sm-3.divswitch
+                    label.switch
+                      input(type='checkbox' checked=val.active id=val._id class='eventelement')
+                      span.slider.round
+                      p
+section#sec2
+  h2 Headline 1
+  p
+    | Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat,
+    | consequatur eum in labore voluptates cum voluptas omnis aspernatur nemo
+    | optio sed porro laudantium incidunt eius quo vitae iste corporis magnam!
+  |       no paragraph test
+section#subscrib
+  h2 Subscription
+  form#subscription-form
+    label Enter your email to get last news from us
+    br
+    label(for='email') Email address
+    input#email(type='form-control' name='email' placeholder='EX. johnsmith@sample.com' size='30')
+    button.btn.btn-primary(type='submit' onclick='sendemailadd()') Submit
+footer.footer
+  .container
+    .row
+      .col-md-4
+        h4 Our social Media Links
+        ul
+          li link1
+          li link2
+          li link3
+      .col-md-4
+        h4 Our data resources
+        ul
+          li link1
+          li link2
+      .col-md-4
+        h4 Contact
+        |             Tel: 403- 000 0000
+        br
+        |             Add: Somewhere, SW 
+        br
+        |             Calgary, AB
+  p.copyright &copy; 2021 CryptoCAD
+p
+script(src='assets/scripts.js')
+script(src='https://code.jquery.com/jquery-3.2.1.slim.min.js' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN' crossorigin='anonymous')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q' crossorigin='anonymous')
+script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js' integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl' crossorigin='anonymous')

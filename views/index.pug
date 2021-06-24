@@ -1,0 +1,52 @@
+extend layout.pug
+block content
+	.intro-BG.intro-home
+		.container
+			.col-md-5
+				h1 CryptoCad, Live Crypto prices in C$
+				h2
+					| CryptoCurrency prices are provided from international Exchanges
+	.container
+		.row
+			.col-md.mainbanner
+				h2#date
+		.row
+			.table
+				#pricetable.container
+					.row.tableheader1.h3
+						.col-sm-2
+							h3 Logo
+						.col-sm-3
+							h3 Symbole
+						.col-sm-4
+							h3 Name
+						.col-sm-3
+							h3 Price(CAD)
+					each val,index in cryptolist1
+						.row
+							.col-sm-2.table-cell
+								.crypto-logo
+									img(src=val[2])
+							.col-sm-3.table-cell=val[0]
+							.col-sm-4.table-cell=val[1]
+							.col-sm-3.table-cell
+								p(id=val[0])
+					
+						
+	section#sec2
+		h2 Headline 1
+		p
+			| Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat,
+			| consequatur eum in labore voluptates cum voluptas omnis aspernatur nemo
+			| optio sed porro laudantium incidunt eius quo vitae iste corporis magnam!
+		| no paragraph test
+	section#subscrib
+		h2 Subscription
+		form#subscription-form
+			label Enter your email to get last news from us
+			br
+			label(for='email') Email address
+			input#email(type='email' name='email' placeholder='EX. johnsmith@sample.com' size='30' required)
+			button#btnSubmitEmail.btn.btn-primary(type='submit') Submit
+		p#servermessage
+	

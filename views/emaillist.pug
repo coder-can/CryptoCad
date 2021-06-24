@@ -1,0 +1,74 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='assets/bootstrap.min.css')
+  link(rel='stylesheet' href='assets/main.css')
+  script(type="text/javascript" src='assets/scripts.js' async defer)
+  title CryptoCAD Admin
+nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+  button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarTogglerDemo03' aria-controls='navbarTogglerDemo03' aria-expanded='false' aria-label='Toggle navigation')
+    span.navbar-toggler-icon
+  #navbarTogglerDemo03.collapse.navbar-collapse
+    ul.navbar-nav.mr-auto.mt-2.mt-lg-0
+      a.navbar-brand(href='/' target='_blank')
+        img(src='assets/img/cryptocad-logo-bg-70.png' height='32')
+      li.nav-item
+        a.nav-link(href='admin')
+          | Admin page
+          span.sr-only 
+      li.nav-item.active
+        a.nav-link(href='emaillist')
+          | Email list
+          span.sr-only (current)
+      li.nav-item
+        a.nav-link(href='logout') Logout
+form
+.container
+  .row
+    .col-md.mainbanner
+      h1 Subscription email list
+  .row
+    .col-md.mainbanner
+      h2#date1 Add or remove any
+  .row
+    .table
+      #pricetable.container
+        .row.tableheader1.h3
+          .col-sm-1
+            h3 # 
+          .col-sm-5
+            h3 Email adress
+          .col-sm-2 
+            h3 Date
+          .col-sm-2 
+            h3 Time
+          .col-sm-2
+            h3 Delete
+        each val,index in emaillist1
+            .row
+                .col-sm-1.table-cell=index+1
+                .col-sm-5.table-cell=val.email
+                .col-sm-2.table-cell=val.date
+                .col-sm-2.table-cell=val.time
+                .col-sm-2.table-cell
+                    input(type='button' class='btn2' name='delete' value='Delete' id=val._id onclick='del_email(this)')
+  .row
+    p#servermessage(style="display:none")
+
+section#subscrib
+  form#addnewemailform
+    h2 Add New email
+    label Enter new email to the list one by one.
+    br
+    label(for='newemail') Email address
+    input#newemail(type='form-control' name='newemail' placeholder='EX. johnsmith@sample.com' size='30')
+    input.btn.btn-primary(type='submit' name='submit' value='Submit' id='submitemail1')
+    p#servermessage
+footer.footer
+  p.copyright &copy; 2021 CryptoCAD
+p
+script(src='https://code.jquery.com/jquery-3.2.1.slim.min.js' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN' crossorigin='anonymous')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q' crossorigin='anonymous')
+script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js' integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl' crossorigin='anonymous')

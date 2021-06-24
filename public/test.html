@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login - CryptoCAD</title>
+    <link rel="stylesheet" href="assets/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/main.css" />
+  </head>
+  <body>
+    <div class="intro-BG intro-aboutus">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-2"></div>
+          <div class="col-lg-4">
+            <div class="login-form-bg-color">
+              <form class="login-form" id="loginform">
+                <img
+                  class="mb-4 navbar-brand"
+                  src="assets/img/cryptocad-logo-70.png"
+                  alt="Crypto Logo"
+                />
+                <h2>Please sign in</h2>
+                <label class="sr-only" for="userEmail">Email address</label
+                ><input
+                  class="form-control"
+                  id="useremail"
+                  type="email"
+                  placeholder="Email address"
+                  required
+                  autofocus
+                /><label class="sr-only" for="inputPassword">Password</label
+                ><input
+                  class="form-control"
+                  id="inputPassword"
+                  type="password"
+                  placeholder="Password"
+                  required
+                />
+                <div class="checkbox mb-2">
+                  <label
+                    ><input type="checkbox" value="remember-me" />Remember
+                    me</label
+                  >
+                </div>
+                <input
+                  class="btn btn-lg btn-primary btn-block"
+                  type="submit"
+                  id="btnSubmit"
+                />
+                <p id="sysmessage"></p>
+                <p class="mt-3 mb-3 text-muted">
+                  <a href="/">Back to Home page</a>
+                </p>
+                <p class="mt-3 mb-3 text-muted">&copy; 2021 CryptoCAD</p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="assets/scripts.js"></script>
+</html>

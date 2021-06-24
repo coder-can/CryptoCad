@@ -1,0 +1,332 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+:root {
+  /*! theme colors */
+  --dark1: #1b2532;
+  --dark2: #2f3750;
+  --light1: #d4eaf3;
+  --light2: #a8c7d3;
+  --light3: #99c9d3;
+
+  --orange1: #ff530d;
+  --yellow1: #f3bf14;
+  --gray: #aaa;
+  --gray-dark: #222;
+  --sansfont: "Open Sans", "Segoe UI", Roboto;
+
+  --primary: #008cba;
+  --secondary: #eee;
+  --success: #43ac6a;
+  --info: #5bc0de;
+  --warning: #e99002;
+  --danger: #f04124;
+  --light: #eee;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
+html {
+  height: 100%;
+  margin: 0;
+}
+body {
+  margin: 0;
+  font-family: var(--sansfont);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--dark1);
+  background-color: #fff;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  height: 100%;
+}
+
+.intro-BG {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100%;
+  width: 100%;
+}
+
+.intro-home {
+  background-image: url("img/cryptos-bg.jpg");
+}
+
+.intro-aboutus {
+  background-image: url("img/cryptocad-intro1200.jpg");
+}
+
+.intro-BG h1 {
+  color: var(--yellow1);
+  font-size: calc(+4rem);
+  font-weight: 600;
+}
+.intro-BG h2 {
+  color: var(--light1);
+  font-size: +2rem;
+  font-weight: 300;
+}
+
+.crypto-logo {
+  box-align: center;
+  text-align: center;
+  vertical-align: middle;
+  width: 40px;
+  height: 40px;
+  margin-top: 0;
+  padding-top: 0;
+  display: inline-block;
+}
+
+.crypto-logo img {
+	text-align: center;
+	width: 100%;
+}
+.container {
+  padding-top: 20px;
+}
+
+.table .row {
+  margin-top: 5px;
+}
+section {
+  text-align: center;
+  margin: 30px 5px 10px 5px;
+}
+
+hr {
+  margin: 1rem 0;
+  color: inherit;
+  background-color: currentColor;
+  border: 0;
+  opacity: 0.5;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+h1,
+.h1 {
+  font-size: 36px;
+  color: var(--darkblue1);
+}
+
+h2,
+.h2 {
+  font-size: 28px;
+  color: var(--orange1);
+}
+
+h3,
+.h3 {
+  font-size: 26px;
+  color: var(--dark2);
+}
+
+h4,
+.h4 {
+  font-size: 24px;
+}
+
+.navbar,
+.navbar-expand-lg,
+.navbar-dark,
+.bg-dark {
+  background-color: var(--dark1) !important;
+  color: var(--light1);
+}
+
+.footer {
+  margin-top: 20px;
+  background-color: var(--dark2);
+  color: var(--gray);
+  min-height: 100px;
+}
+
+.footer h4 {
+  color: var(--light1);
+  font-size: 20;
+}
+.copyright {
+  text-align: center;
+  font-size: 18px;
+  color: var(#666);
+}
+
+.table  div.container>div:nth-of-type(odd) {
+	background: #f0f0f0;
+  }
+
+.table {
+  color: var(--dark1);
+}
+.tableheader1 {
+  font-weight: 500;
+  text-align: center;
+  background-color: var(--light2)!important;
+  padding: 5px;
+}
+
+.tableheader1 h3 {
+  color: var(--dark2);
+  font-weight: 500;
+}
+
+.table-cell {
+  padding: 10px;
+ text-align: center; 
+  vertical-align: middle;
+
+}
+.row .even {
+  background-color: #eee;
+}
+
+.login-form {
+  max-width: 400px;
+  padding: 10px;
+  margin: 0 auto;
+  margin-top: 50px;
+  width: 100%;
+  text-align: center;
+}
+
+.login-form a,
+.login-form p,
+.login-form label {
+  color: var(--light2);
+}
+
+.login-form-bg-color {
+  background-color: #1b253295;
+}
+
+.form-control {
+  margin:10px 0 10px 0;
+}
+
+.btn-primary {
+  color: var(--light1);
+  border-color: var(--light2);
+  background-color: var(--dark2);
+}
+
+#servermessage{
+	color: var(--orange1);
+}
+#sysmessage {
+  color: #fbcfa2;
+  min-height: 24pt;
+}
+
+.col-sm-5 {
+overflow-wrap: break-word;
+}
+
+
+button {
+	border-radius: 7px;
+}
+
+.btn2{
+	background-color: var(--light1);
+	border: 1px solid var(--light3);
+	border-radius: 7px;
+}
+
+/* The switch - the box around the slider */
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+  }
+  
+
+  .divswitch {
+	  vertical-align: middle;
+	  text-align: center;
+  }
+
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	-webkit-transition: .4s;
+	transition: .4s;
+  }
+  
+  .slider:before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	-webkit-transition: .4s;
+	transition: .4s;
+  }
+  
+  input:checked + .slider {
+	background-color: var(--light3);
+  }
+  
+  input:focus + .slider {
+	box-shadow: 0 0 1px var(--light3);
+  }
+  
+  input:checked + .slider:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+	border-radius: 34px;
+  }
+  
+  .slider.round:before {
+	border-radius: 50%;
+  }
+

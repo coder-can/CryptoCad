@@ -1,0 +1,32 @@
+doctype html
+html(lang='en')
+	head
+		meta(charset='UTF-8')
+		meta(http-equiv='X-UA-Compatible' content='IE=edge')
+		meta(name='viewport' content='width=device-width, initial-scale=1.0')
+		title login - CryptoCAD
+		link(rel='stylesheet' href='assets/bootstrap.min.css')
+		link(rel='stylesheet' href='assets/main.css')
+	body
+		button(onclick='testbtnclick()') Click to Run testbtnclick
+		h2#btntest Result
+		h1 Test JS
+		.login-form-bg-color
+			form#testform.login-form
+				img.mb-4.navbar-brand(src='assets/img/cryptocad-logo-70.png' alt='Crypto Logo')
+				h2 Please sign in
+				label.sr-only(for='userEmail') Email address
+				input#useremail.form-control(type='text' placeholder='Email address' autofocus)
+				label.sr-only(for='inputPassword') Password
+				input#inputPassword.form-control(type='password' placeholder='Password' )
+				.checkbox.mb-2
+					label
+						input(type='checkbox' value='remember-me')
+						| Remember
+						| me
+				input#btnSubmit.btn.btn-lg.btn-primary.btn-block(type='submit')
+				p#sysmessage
+				p.mt-3.mb-3.text-muted
+					a(href='/') Back to Home page
+				p.mt-3.mb-3.text-muted &copy; 2021 CryptoCAD
+	script(src='assets/scripts.js')
